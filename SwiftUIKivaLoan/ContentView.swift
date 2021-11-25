@@ -27,21 +27,21 @@ struct ContentView: View {
                     .padding(.vertical, 5)
             }
             .navigationBarTitle("Kiva Loan")
-//            .toolbar {
-//                ToolbarItem(placement: .navigationBarTrailing) {
-//                    Button(action: {
-//                        withAnimation(.linear) {
-//                            self.filterEnabled.toggle()
-//                            self.loanStore.filterLoans(maxAmount: Int(self.maximumLoanAmount))
-//                        }
-//                        
-//                    }) {
-//                        Text("Filter")
-//                            .font(.subheadline)
-//                            .foregroundColor(.primary)
-//                    }
-//                }
-//            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        withAnimation(.linear) {
+                            self.filterEnabled.toggle()
+                            self.loanStore.filterLoans(maxAmount: Int(self.maximumLoanAmount))
+                        }
+                        
+                    }) {
+                        Text("Filter")
+                            .font(.subheadline)
+                            .foregroundColor(.primary)
+                    }
+                }
+            }
             
         }
      
