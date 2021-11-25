@@ -61,10 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				0CC058332706826B00FD342E /* LoanCellView.swift */,
-				0CC05835270683D500FD342E /* LoanFilterView.swift */,
 				0CC0582F27067CEC00FD342E /* Loan.swift */,
 				0CC0583127067DED00FD342E /* LoanStore.swift */,
 				0CC0582027067CBE00FD342E /* SwiftUIKivaLoanApp.swift */,
+				0CC05835270683D500FD342E /* LoanFilterView.swift */,
 				0CC0582227067CBE00FD342E /* ContentView.swift */,
 				0CC0582427067CC000FD342E /* Assets.xcassets */,
 				0CC0582927067CC000FD342E /* Info.plist */,
