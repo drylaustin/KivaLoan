@@ -10,17 +10,18 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var loanStore = LoanStore()
     
+    
     @State private var filterEnabled = false
     @State private var maximumLoanAmount = 10000.0
     
     
     var body: some View {
         NavigationView {
-            if self.filterEnabled {
+            VStack{if self.filterEnabled {
                 LoanFilterView(amount: self.$maximumLoanAmount)
                     .transition(.opacity)
+                    .padding(.vertical, 300)
             }
-            
             List(loanStore.loans) { loan in
                 
                 LoanCellView(loan: loan)
@@ -34,7 +35,6 @@ struct ContentView: View {
                             self.filterEnabled.toggle()
                             self.loanStore.filterLoans(maxAmount: Int(self.maximumLoanAmount))
                         }
-                        
                     }) {
                         Text("Filter")
                             .font(.subheadline)
@@ -42,13 +42,11 @@ struct ContentView: View {
                     }
                 }
             }
-            
-        }
-     
-    
+        }}
         .navigationViewStyle(StackNavigationViewStyle())
         .onAppear() {
             self.loanStore.fetchLatestLoans()
+            
         }
     }
 }
